@@ -4,7 +4,7 @@ info:
   description: A service that enables users to find biomedical literature using PubMed ChatGPT Plugin.
   version: "v1"
 servers:
-- url: https://2e29-2a01-110-a008-1-6071-642f-b7fe-bb5f.ngrok-free.app
+- url: https://2e29-2a01-110-a008-1-6071-642f-b7fe-bb5f.ngrok-free.app/api
 paths:
   /SearchArticles:
     get:
