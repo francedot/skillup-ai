@@ -12,7 +12,7 @@ paths:
       summary: Find a list of PubMed Articles. Will return title, url and authors information for article in the results.
       parameters:
       - in: query
-        name: name_query
+        name: query
         schema:
           type: string
         description: Article Search Query to use to find the PubMed Articles.
