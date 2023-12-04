@@ -8,7 +8,7 @@ servers:
 paths:
   /api/turingbot_extension:
     get:
-      operationId: searchArticles
+      operationId: SearchArticles
       summary: Find a list of PubMed Articles. Will return title, url and authors information for article in the results.
       parameters:
       - in: query
