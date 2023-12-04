@@ -1,12 +1,12 @@
-openapi: 3.0.1
+openapi: 3.0.0
 info:
   title: PubMed Search Plugin Service
   description: A service that enables users to find biomedical literature using PubMed ChatGPT Plugin.
-  version: "v1"
+  version: 1.0.2
 servers:
-- url: https://2e29-2a01-110-a008-1-6071-642f-b7fe-bb5f.ngrok-free.app/api
+- url: https://2e29-2a01-110-a008-1-6071-642f-b7fe-bb5f.ngrok-free.app/
 paths:
-  /SearchArticles:
+  "api/SearchArticles":
     get:
       operationId: SearchArticles
       summary: Find a list of PubMed Articles. Will return title, url and authors information for article in the results.
