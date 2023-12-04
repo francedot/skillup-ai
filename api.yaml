@@ -1,0 +1,46 @@
+openapi: 3.0.1
+info:
+  title: PubMed Search Plugin Service
+  description: A service that enables users to find biomedical literature using PubMed ChatGPT Plugin.
+  version: "v1"
+servers:
+- url: https://2e29-2a01-110-a008-1-6071-642f-b7fe-bb5f.ngrok-free.app
+paths:
+  /api/turingbot_extension:
+    get:
+      operationId: searchArticles
+      summary: Find a list of PubMed Articles. Will return title, url and authors information for article in the results.
+      parameters:
+      - in: query
+        name: articleQuery
+        schema:
+          type: string
+        description: Article Query to use to find the PubMed Articles.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArticlesResult"
+components:
+  schemas:
+    ArticlesResult:
+      type: object
+      properties:        
+        articlesResult:
+          type: array
+          items:
+            $ref: "#/components/schemas/Article"      
+    Article:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the PubMed Article
+        url:
+          type: string
+          description: Url of the PubMed Article
+        authors:
+          type: string
+          description: Authors of the PubMed Article
