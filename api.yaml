@@ -12,23 +12,23 @@ paths:
       summary: Find a list of PubMed Articles. Will return title, url and authors information for article in the results.
       parameters:
       - in: query
-        name: articleQuery
+        name: search
         schema:
           type: string
-        description: Article Query to use to find the PubMed Articles.
+        description: Article Search Query to use to find the PubMed Articles.
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ArticlesResult"
+                $ref: "#/components/schemas/ArticlesSearchResult"
 components:
   schemas:
-    ArticlesResult:
+    ArticlesSearchResult:
       type: object
       properties:        
-        articlesResult:
+        articlesSearchResult:
           type: array
           items:
             $ref: "#/components/schemas/Article"      
